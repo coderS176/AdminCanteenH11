@@ -1,0 +1,11 @@
+<resources>
+    <string-array name="type_options">
+        <item>Preprocessed</item>
+        <item>Prepared</item>
+    </string-array>
+
+    <string-array name="available_status_options">
+        <item>Available</item>
+        <item>Not Available</item>
+    </string-array>
+</resources>

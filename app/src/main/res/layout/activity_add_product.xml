@@ -1,0 +1,169 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/bree_serif"
+        android:text="Add New Product"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <!-- CardView containing input fields -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/border"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Product Name -->
+            <EditText
+                android:id="@+id/editTextProductName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border"
+                android:hint="Enter Product Name"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <!-- Description -->
+            <EditText
+                android:id="@+id/editTextDescription"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border"
+                android:hint="Enter Description"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <!-- Available Status -->
+            <Spinner
+                android:id="@+id/spinnerAvailableStatus"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:layout_marginTop="16dp"
+                android:entries="@array/available_status_options"
+                android:prompt="@string/available_status_prompt"
+                android:textSize="16sp" />
+
+            <!-- Type -->
+            <Spinner
+                android:id="@+id/spinnerType"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/border"
+                android:layout_marginTop="16dp"
+                android:entries="@array/type_options"
+                android:prompt="@string/type_prompt"
+                android:textSize="16sp" />
+
+            <!-- Price -->
+            <EditText
+                android:id="@+id/editTextPrice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border"
+                android:hint="Enter Price"
+                android:inputType="numberDecimal"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <!-- Appliance Capacity -->
+            <EditText
+                android:id="@+id/editTextApplianceCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border"
+                android:hint="Enter Appliance Capacity (e.g., maggie capacity)"
+                android:inputType="number"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <!-- Cooking Time -->
+            <EditText
+                android:id="@+id/editTextCookingTime"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border"
+                android:hint="Enter Cooking Time (in minutes)"
+                android:inputType="number"
+                android:paddingStart="8dp"
+                android:textSize="16sp" />
+
+            <!-- Image Selection -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:id="@+id/editTextImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_browse"
+                    android:drawablePadding="8dp"
+                    android:focusable="false"
+                    android:hint="Select Image"
+                    android:inputType="none"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageViewPreview"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/editTextImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <!-- Add Product Button -->
+            <Button
+                android:id="@+id/buttonAddProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Add Product"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="visible" />
+
+</LinearLayout>
